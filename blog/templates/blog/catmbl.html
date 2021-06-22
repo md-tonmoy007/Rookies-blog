@@ -1,0 +1,35 @@
+{% extends 'blog/header.html' %}
+{%load static%}
+
+
+{% block content%}
+
+
+
+
+
+
+ <div class="blog-item item-2">
+
+        <div class="card" style="width: 100%;">
+            <div class="card-header">
+              <b>CATEGORIES</b>
+            </div>
+            <ul class="list-group list-group-flush">
+        {% for c in categories %}              
+              <a href="{% url 'category' c.id%}"><li class="list-group-item">{{c.title}}</li></a> 
+         {% endfor %}
+            </ul>
+        </div>
+       
+    </div>
+
+
+
+
+
+
+
+
+
+{%endblock%}

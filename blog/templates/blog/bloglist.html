@@ -1,0 +1,90 @@
+{% extends 'blog/header.html' %}
+{%load static%}
+
+
+{% block content%}
+<head>
+    <title>Rookies blog</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+  .full{
+    width: 100%;
+  }
+  .side{
+    float: right;
+    top: 0;
+    width: 30%;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .card{
+    margin-left: 10%;
+    margin-right: 40%;
+    width: 50%;
+  }
+  @media screen and (max-width: 600px) {
+    .card{
+      margin-left: 10%;
+      width: 100%;
+      margin: 0;
+    }
+    .side{
+      float: none;
+      width: 30rem;
+      margin-bottom: 10px;
+    }
+  }
+
+</style>
+  </head>
+
+
+<div class="full">
+
+  <div class="side">
+
+            <div class="card-header">
+              <b>CATEGORIES</b>
+            </div>
+            <ul class="list-group list-group-flush">
+          {% for c in categories %}              
+              <a href="{% url 'category' c.id%}"><li class="list-group-item">{{c.title}}</li></a> 
+          {% endfor %}
+            </ul>
+        </div>
+</div>
+
+
+{% for post in all_posts %}
+
+
+    <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ post.author }} | {{ post.created_on}} </h6>
+          <p class="card-text">{{post.content|slice:":200" }}.</p>
+          <a href="{% url 'blog_details' post.slug %}"class="card-link">Read More</a>
+          <button  style="float:right" type="button" class="btn btn-outline-secondary"disabled>{{post.category}}</button>
+    </div>
+
+    
+
+  </div>
+      {%empty%}
+      <h3>Sorry Mate !</h3>
+      <h3>No blog right now </h3>
+  {% endfor %}
+</div>
+
+
+
+
+
+
+
+{%endblock%}
+

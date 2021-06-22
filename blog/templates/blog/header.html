@@ -1,0 +1,49 @@
+{% load static %}
+<html>
+  <head>
+    <title>Rookies blog</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+      @media screen and (max-width: 600px) {
+        .cat-btn{
+        visibility: visible;
+      }
+    }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<body style="background-color: #ddd;">
+ 
+<div class="topnav" id="myTopnav">
+ <div class='navigation'> 
+    <a href="{%url 'home'%}" class="active"><b>Rookies_Cookie</b></a>
+    <a href="{% url 'about' %}" class="about-me">About <br> 
+       <a href="{% url 'catmbl' %}"style="" class="cat-btn">Category</a>
+       <a href="{% url 'bloglist' %}"style="" class="cat-btn">All Blogs</a>
+
+    </a>
+   
+    <form class="search-form" action="{% url 'search' %}">
+      <input id="search-area" type="text" placeholder="Search.." name="search">
+      <button class="submit-button" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+{% block content %}
+
+
+{% endblock %}
+
+<script type="text/javascript" src="{% static '/js/home.js' %}"></script>
+</html>
+
+

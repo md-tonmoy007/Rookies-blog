@@ -1,0 +1,26 @@
+{% extends 'blog/header.html'%}
+{% load static %}
+
+
+{% block content%}
+
+<style type="text/css">
+	img{
+		width: 250px;
+		float: center;
+	}
+</style>
+<body>
+	<div class="container">
+	  	<div class="row">
+	    	<div class="col-md-8 card mb-4  mt-3 left  top">
+	      		<div class="card-body">
+	      			<img src="{%static '/images/profile.jpg' %}">
+			      	<p>Hello this is Rookie for you. My real name is jifat. </p>
+			      	<p>I love tech and everything around it </p>
+			      	<p>so you will read about things around productivity and technologies from my blogs</p>
+	      		</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

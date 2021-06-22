@@ -1,0 +1,351 @@
+{% extends 'blog/header.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<head>
+
+<style type="text/css">
+  @import 'https://fonts.googleapis.com/css?family=Indie+Flower';
+* {
+  
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  background-color:#596b94;
+  color: 67727A;
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
+}
+h2 {
+  font-size: 180%;
+  font-weight: 700px;
+  text-align: center;
+  padding-top: 2%
+}
+h3 {
+  font-size: 175%;
+  line-height: 155%;
+  padding: 5% 0;
+}
+p {
+  font-size: 110%;
+  line-height: 150%;
+  padding: 1%;
+  text-indent: 2%;
+  text-align: justify;
+  color: #F5F5F5;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin-bottom: -4px;
+}
+header {
+  background-color: #6991AC;
+  width: 100%;
+  height: 86px;
+}
+#header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#logo {
+  margin: 15px 0 20px 25px;
+  width: 6%;
+
+}
+/*---start navigation---*/
+nav {
+  float: right;
+  padding: 25px 20px 0 0;
+}
+#menu-icon {
+  display: hidden;
+  width: 40px;
+  height: 40px;
+  background: url(https://res.cloudinary.com/dgpmuegqe/image/upload/v1492571257/nav_xe79ju.png) center;
+}
+a:hover#menu-icon {
+  border-radius: 4px 4px 0 0;
+}
+ul {
+  list-style-type: none;
+}
+nav ul li {
+  font-size: 150%;
+  display: inline-block;
+  float: left;
+  padding: 10px;
+}
+nav ul li a {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #C3D7DF;
+}
+.current {
+  color: #C3D7DF;
+}
+/*---end of navigation---*/
+.banner {
+  width: 100%;
+  background-color: white;
+}
+.banner img{
+  width: 100%;
+}
+.banner-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.one-fourth {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.card{
+  min-height: 60%;
+  color: floralwhite;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #44ab8c;
+  -webkit-animation: random 5s infinite;
+  animation: random 5s infinite;
+}
+@keyframes  random {
+    15% { background-color: #3cba94; } 
+    30% { background-color: #34c79b; } 
+    45% { background-color: #2ad4a1; } 
+    60% { background-color: #19e6a9; }
+    75% { background-color: #03fcb2; }  
+}
+
+.one-fourth i {
+  color: #F0F0F0;
+  font-size: 500%;
+  padding: 13% 0 4% 0;
+}
+.inner-wrapper {
+  float: left;
+  width: 100%;
+  background-color: #C3D7DF;
+}
+article {
+  float: left;
+  width: 50%;
+  margin; 0 auto;
+  height: auto;
+}
+#tablet {
+  background-color: #C3D7DF;
+}
+aside {
+  width: 50%;
+  float: right;
+  margin: 0 auto;
+  height: auto;
+}
+#tablet2 {
+  background-color: #A2B1C1;
+}
+#mobile {
+  background-color: #BEB9AD;
+}
+#desktop {
+  background-color: #F1AA90;
+}
+.inner-wrapper-2 {
+  width: 100%;
+  float: left;
+  background-color: #C3D7DF;
+}
+.inner-wrapper-3 {
+  width: 100%;
+  float: left;
+  background-color: #AADCD2;
+}
+.one-third {
+  width: 33.33333333%;
+  float: left;
+  text-align: center;
+}
+#google {
+  background-color: #A2B1C1;
+}
+#marketing {
+  background-color: #BEB98D;
+}
+#customers {
+  background-color: #AADCD2;
+}
+#smelly {
+  background-color: #AADCD2;
+  padding: 0 0 1%;
+  clear: both;
+}
+/*--footer---*/
+footer {
+  background-color: #6991AC;
+  width: 100%;
+}
+.social {
+  list-style-type: none;
+  text-align: center;
+}
+.social li {
+  display: inline;
+}
+.social i {
+  font-size: 250%;
+  margin: 1%;
+  padding: 5% 5% 5% 4%;
+  color: #C3D7DF;
+}
+.social i:hover {
+  color: #f5f5f5;
+}
+/*--- begining of second footer---*/
+footer.second {
+  border-top: 2px solid #AADCD2;
+  background-color: #544859;
+  max-height: 35px;
+}
+footer.second p{
+  text-align: center;
+}
+/*---media start----*/
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 150%;
+  }
+  h3 {
+    font-size: 125%;
+  }
+  p {
+    font-size: 110%;
+  }
+  header {
+    position: absolute;
+  }
+  #logo {
+    margin: 15px 0 20px 25px;
+  }
+  #menu-icon {
+    display: inline-block;
+    }
+  nav ul, nav:active ul {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    background: #6991AC;
+    padding: 20px;
+    right: 20px;
+    top: 60px;
+    border: 1px solid #fff;
+    border-radius: 2px 0 2px 2px;
+    width: 50%;
+  }
+  nav:hover ul {
+    display: block;
+  }
+  nav li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .one-fourth {
+    float: left;
+    width: 100%;
+  }
+  .one-fourth i {
+    font-size: 350%;
+    padding: 4% 0 1% 0;
+  }
+  article {
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+  }
+  .hand-mobile {
+    display: none;
+  }
+  .one-third {
+    width: 100%;
+  }
+  .social i {
+    font-size: 120%;
+  }
+  footer{
+    margin-bottom: 50px;
+  }
+}
+</style>
+</head>
+
+<body>
+  <!---end of header--->
+
+  <section class="banner">
+    <div class="banner-inner">
+      <img width="100px" src="{% static 'images/banner.jpg' %}">
+    </div>
+  </section>
+  <!--end of banner-->
+  {% for post in publish_posts%}
+  <section class="one-fourth" id="html">
+    <div class="item-1 card">
+      <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted" style="color: #4b53c9">{{ post.author }} | {{ post.created_on}} </h6>
+          <p class="card-text">{{post.content|slice:":200" }}.</p>
+          <a href="{% url 'blog_details' post.slug %}"class="card-link btn btn-danger">Read More</a>
+          <button  style="float:right; border:;" type="button" class="btn btn-outline-secondary"disabled>{{post.category}}</button>
+      </div>
+    </div>
+    </section>
+    {%empty%}
+      <h3>Sorry Mate !</h3>
+      <h3>No blog right now </h3>
+    {%endfor%}
+  <!--end of four col section-->
+ <section class="inner-wrapper">
+   <article id="tablet">
+     <img src="{%static 'images/profile.jpg' %}">
+   </article>
+   <aside id="tablet2">
+     <h2>About Me</h2>
+     <p>Hello this is Rookie for you. My real name is jifat. </p>
+              <p>I love tech and everything around it </p>
+              <p>so you will read about things around productivity and technologies from my blogs
+   </aside>
+ </section>
+
+  <section id="smelly">
+    <h2>: )</h2>
+  </section>
+
+
+
+<footer>
+    <ul class="social">
+      <li><a href="https://www.facebook.com/tonmoy.hossainii.90/" target="_blank"><i class="fab fa-facebook-square"> <span class='icon-text'>Facebook</span></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-linkedin"> <span class='icon-text'>Linkedin</span></i></a></li>
+      <li><a href="https://twitter.com/MDTonmoyHossai7" target="_blank"><i class="fab fa-twitter"> <span class='icon-text'>Twitter</span></i></a></a></li>
+      <li><a href="https://www.youtube.com/channel/UCyf5T1AUsSz9VD2iPMgCaXg" target="_blank"><i class="fab fa-youtube"></i></a><span class='icon-text'>youtube</span></li>
+      <li><a href="https://github.com/MD-Tonmoy" target="_blank"><i class="fab fa-github"> <span class='icon-text'>github</span></i></a></li>
+    </ul>
+
+  </footer>
+  <!--end of footer-->
+  <footer class="second">
+    <p>&copy; Tonmoy Hossain Jifat</p>
+  </footer>
+  <!--end second footer-->
+
+{% endblock %}

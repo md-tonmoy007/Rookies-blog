@@ -1,0 +1,90 @@
+{% extends 'blog/header.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+
+<style type="text/css">
+	body{
+		width: 100%;
+	}
+
+	.container{
+
+	}
+
+
+	.title{
+		min-height: 20%;
+		margin-bottom: 20%;
+	}
+	.content-item{
+		border-bottom: 0.5px solid black;
+		padding: 20px;
+	}
+</style>
+<div class="container">
+	  <div class="row">
+	    <div class="col-md-8 card mb-4  mt-3 left  top">
+	      <div class="card-body">
+	      	
+	      	<div class="title">
+	      		<h4>Found based on Post title :</h4>
+	      		<ul>
+	      		{% for title in titles %}
+
+
+	      		<div class="content-item">
+		      	<li>{{ title.title }}
+		      		<a style="float:right;" href="{% url 'blog_details' title.slug %}" class="btn btn-danger">Read More</a>	 
+		      	</li>
+		      	     	
+		      	</div>
+		      	
+		      	{% empty %}
+	      		<h6>found nothing</h6>
+		      	{% endfor %}
+		      	</ul>
+		      	<hr>
+
+	      	</div>
+	      	
+	      	<div class="content">
+	      		<h4> found based on Post Content </h4>
+	      		<ul>
+	      		{% for content in contents %}
+	      		
+	      		<div class="content-item">
+
+	      		<li> {{ content.title }}
+	      			<a style="float: right;" href="{% url 'blog_details' content.slug %}" class="btn btn-danger">Read More</a>
+	      		</li>
+
+	      		
+	      		</div>
+	      		{% empty %}
+	      		<h6>found nothing</h6>
+	      		{% endfor %}
+	      		</ul>
+	      	</div>
+	      	
+
+
+
+	      </div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'blog/header.html' %}
+{% load static %}
+
+
+{%block content%}
+<div style="margin-left: 10% ;margin-bottom: 20% ;" class="row">
+	<div class="col-md-6">
+		<div class="card card-body">
+
+			<form action="" method="POST">
+				{% csrf_token %}
+				{{ form.management_form }}
+				<span style="margin-right: 50px;">Title:</span>
+				{{form.title}}
+				<hr>
+				<span style="margin-right: 50px;">Slug:</span>
+				{{form.slug}}
+				<hr>
+				<span style="margin-right: 50px;">Author:</span>
+				{{form.author}}
+				<hr>
+				<p>Description: </p>
+				<p>{{ form.content }}</p>
+				<hr>
+				<span style="margin-right: 50px;">Status:</span>
+				{{form.status}}
+				<hr>
+				<span style="margin-right: 50px;">category:</span>
+				{{form.category}}
+				<hr>
+				<span style="margin-right: 50px;">feature_pic:</span>
+				{{form.feauture_pic}}
+				<hr>
+
+				
+				<input type="submit" name="Submit">
+			</form>
+
+		</div>
+	</div>
+</div>
+
+{%endblock%}
+
+

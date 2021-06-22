@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.navigation{
+  margin-left: 10%;
+  
+}
+
+.about-pic{
+      width: 200px;
+      margin-bottom: 20px;
+      border-radius: 30%;
+      align-content: center;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #292b2c;
+  padding: 10px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
+}
+
+.topnav a.active {
+  font-size : 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.topnav .icon {
+  display: none;
+}
+.contact-information {
+  visibility :hidden;
+}
+.about-me{
+  visibility :hidden;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav form{
+    display: none;
+  }
+  .socialism{
+    font-size: 12px;
+  }
+  .contact-information{
+    visibility :visible;
+  }
+  .about-me{
+    visibility :visible;
+  }
+  .cat-btn{
+    visibility: visible;
+  }
+  .topnav a.icon {
+    float: right;
+    display: inline-flex;
+  }
+  .topnav a.icon:hover{
+    background: #ddd;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive form{
+    display: inline-flex;
+    margin: 0;
+    float: none;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .icon-text{
+    display: none;
+  }
+  .grid-item-2{
+    display: none;
+  }
+  .grid-item-3{
+    display: none;
+  }
+}
+
+
+
+
+.container{
+  margin-right: 10%;
+  margin-left:  10%;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: 60% 30%;
+  grid-gap: 50px;
+  margin-bottom: 250px;
+}
+.grid-item-1{
+  grid-row: 1/4;
+  width: 100%;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.grid-item-2{
+
+  padding-left: 5px;
+}
+.grid-item-3{
+  grid-column-start:2;
+  padding-left: 5px;
+  grid-row-start:2;
+
+}
+
+.grid-item-3 a {
+ text-decoration: none; 
+}
+.social-media{
+  font-size: 20px;
+  margin: 10px;
+}
+.fa-twitter{
+  color: #1DA1F2;
+}
+.fa-linkedin{
+  color: #0e76a8;
+}
+.icon-text{
+  color: whitesmoke;
+  font-size: 14px;
+}
+.fa-github{
+  color: black;
+}
+
+.fa-search{
+  width: 25px;
+  color: #292b2c;
+}
+.submit-button{
+    background-color: white;
+}
+.topnav form {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:   #292b2c;
+  color: white;
+  text-align: center;
+  padding-bottom: 20px ;
+}
+
+.btn-light{
+  border: 1px;
+}
+
+.all-blogs: hover{
+  text-decoration: none;
+}
