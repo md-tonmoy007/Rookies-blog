@@ -25,7 +25,7 @@ SECRET_KEY = ')mny)(1=lyh-2h9-!=#umwz=&$47!y)+($b*_wc*j4li=_xp5v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://rookies-blog.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['https://rookies-blog.herokuapp.com']
 
 
 # Application definition
